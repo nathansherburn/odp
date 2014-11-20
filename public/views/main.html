@@ -1,0 +1,73 @@
+
+
+
+<div class="main-container">
+  <div class="unit-title">
+    ABC1001 - Example Unit
+</div>
+<div class="col-1-2">
+    <div id="left" class="pie-height" ng-controller="MainCtrl">
+        <nvd3-pie-chart
+        class="pie-height"
+        data="grades"
+        id="pie-chart"
+        showLabels="true"
+        x="xFunction()"
+        y="yFunction()"
+        tooltip ="true"
+        interactive = "true"
+        donut="true"
+        donutRatio="0.5"
+        donutLabelsOutside="true"
+        margin = "{left:0,top:0,bottom:0,right:0}">
+        <svg style="background: #fff;" class="pie-height"></svg>
+    </nvd3-pie-chart>
+</div>
+</div>
+
+<div class="col-1-2">
+
+    <div class="lecturer-profile-box">
+        <h1>Lecturer Profile:</h1>
+        <br>Prof. Example has 10 years experience in motion studies and other intersting  things.<br>
+        <br>She has exemplified the highest levels of competency in many fields<br>
+        <br>Her qualifications include:<br>
+
+        <ul>
+            <li>item</li>
+            <li>item</li>
+            <li>item</li>
+            <li>item</li>
+        </ul>
+
+    </div>
+</div>
+
+<div class="col-1-2">
+    <div ng-controller="MainCtrl">
+        <nvd3-multi-bar-horizontal-chart
+        data="setu"
+        id="horizontal-chart"
+        height="500"
+        showXAxis="true"
+        showYAxis="true"
+        tooltips="true"
+        interactive="true"
+        isArea="true"   
+        margin="{left:120,top:100,bottom:120,right:100}">
+        <svg></svg>
+    </nvd3-multi-bar-horizontal-chart>
+</div>
+
+
+</div>
+<div class="col-1-2">
+    word cloud
+    <br>.
+    <br>.
+    <br>.
+    <br>.
+    <br>.
+    <br>.      </div>
+    <br class="clear">
+</div>

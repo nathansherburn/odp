@@ -1,0 +1,11 @@
+{
+  "name": "monashODP",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "^4.10.2",
+    "mongodb": "^1.4.20"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  }
+}
