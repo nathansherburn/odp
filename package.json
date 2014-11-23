@@ -1,11 +1,16 @@
 {
-  "name": "monashODP",
+  "name": "ODP",
   "version": "0.0.1",
   "dependencies": {
+    "cas": "0.0.3",
     "express": "^4.10.2",
     "mongodb": "^1.4.20"
   },
   "engines": {
     "node": ">=0.10.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/username/repository.git"
   }
 }
