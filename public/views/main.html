@@ -29,12 +29,14 @@
     <div class="lecturer-profile-box">
         <h1>{{ unit.lecturer.name }}</h1>
 				<br>{{ unit.lecturer.description }}<br>
-				<br><a href="https://www.google.com.au/#q=linkedin+monash+{{ unit.lecturer.name }}"><img src="https://lh4.googleusercontent.com/-cTMuJhKkzAc/UfGZGGGggbI/AAAAAAAASd0/3tvKO6lRdZA/s722-no/LinkedIn-Google-Plus-Profile-Pic-01.png" height=100 width=100></a><br>
+				<br>
+				<a href="https://www.google.com.au/#q=linkedin+monash+{{ unit.lecturer.name }}">
+				<img src="http://cdn.marketplaceimages.windowsphone.com/v8/images/9ea69e92-35fd-4070-950e-ed940779f4c0?imageType=ws_icon_large" height=100 width=100>
+				</a><br>
     </div>
 </div>
 
 <div class="col-1-2">
-    <div ng-controller="MainCtrl">
         <nvd3-multi-bar-horizontal-chart
         data="setu"
         id="horizontal-chart"
@@ -47,7 +49,6 @@
         margin="{left:120,top:100,bottom:120,right:100}">
         <svg></svg>
     </nvd3-multi-bar-horizontal-chart>
-</div>
 
 
 </div>
