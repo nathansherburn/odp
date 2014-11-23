@@ -6,8 +6,8 @@ var units = require('./routes/units');
 // Serve all static files in 'public' folder to users
 app.use(express.static(__dirname + '/public'));
 
-app.get('/unit/:id', units.findById);
-app.get('/units/list', units.getUnitList);
+// app.get('/unit/:id', units.findById);
+app.get('/units', units.getUnitList);
 
 
 

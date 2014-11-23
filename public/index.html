@@ -9,16 +9,18 @@
     <link rel="stylesheet" href="styles/bootstrap.css" />
     <link rel="stylesheet" href="styles/main.css">
   </head>
-  <body ng-app="monashODP">
+  <body ng-app="odp">
 
+		<div class="menu-button">menu</div>
+		<div class="side-menu" ng-controller="MenuCtrl">
+			<h3>{{ name }}</h3>
+			<div ng-repeat="unit in units">
+				<a href="#/unit/{{ unit._id }}">{{ unit.name }}</a>
+			</div>
+		</div>
 
-    <div class="side-menu" ng-controller="MenuCtrl">
-      <h3>John Alan Smith</h3>
-    </div>
-	
-    <div class="menu-button">menu</div>
-
-    <div ng-view></div>
+				
+		<div ng-view></div>
 
 
 
@@ -36,8 +38,7 @@
 
     <!-- angular scripts -->
     <script src="scripts/app.js"></script>
-    <script src="scripts/controllers/main.js"></script>
+		<script src="scripts/controllers/main.js"></script>
     <script src="scripts/controllers/menu.js"></script>
-
 </body>
 </html>

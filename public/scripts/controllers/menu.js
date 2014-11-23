@@ -7,16 +7,12 @@
  * # MenuCtrl
  * Controller of the monashODP
  */
- angular.module('monashODP')
- .controller('MenuCtrl', function ($scope) {
+ angular.module('odp')
+ .controller('MenuCtrl', ['$scope', 'unitFactory', function ($scope, unitFactory) {
 
  	var menuOpen = false;
 	var hideMenuDisabled = false;
 
-	if ( $( window ).width() > 1000 ) {
-		menuOpen = true;
-		hideMenuDisabled = true;
-	}
 
  	$(".menu-button").click(function(){
 		if (!hideMenuDisabled) {
@@ -32,6 +28,13 @@
 		}
  	});
 
+	// For when the screen starts large
+	if ( $( window ).width() > 1000 ) {
+		menuOpen = true;
+		hideMenuDisabled = true;
+	}
+
+	// For when the screen size changes
 	$( window ).resize(function() {
 		if ( $( window ).width() > 1000 ){
 			menuOpen = true;
@@ -46,4 +49,17 @@
 		}
 	});
 
-});
+	unitFactory.getUnitData()
+		.success(function (unitData) {
+			$scope.units = unitData; 
+			unitFactory.units = unitData;
+    })
+    .error(function (error) {
+      console.log('Unable to load units: ' + error.message);
+    });
+
+	$scope.name = 'John Smith';
+
+	// console.log($scope.units);
+
+}]);

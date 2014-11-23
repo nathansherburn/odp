@@ -1,12 +1,11 @@
+<div class="main-container" ng-controller="MainCtrl">
 
-
-
-<div class="main-container">
-  <div class="unit-title">
-    ABC1001 - Example Unit
+<div class="unit-title">
+   {{ unit.name }} 
 </div>
+
 <div class="col-1-2">
-    <div id="left" class="pie-height" ng-controller="MainCtrl">
+    <div id="left" class="pie-height">
         <nvd3-pie-chart
         class="pie-height"
         data="grades"
@@ -28,18 +27,9 @@
 <div class="col-1-2">
 
     <div class="lecturer-profile-box">
-        <h1>Lecturer Profile:</h1>
-        <br>Prof. Example has 10 years experience in motion studies and other intersting  things.<br>
-        <br>She has exemplified the highest levels of competency in many fields<br>
-        <br>Her qualifications include:<br>
-
-        <ul>
-            <li>item</li>
-            <li>item</li>
-            <li>item</li>
-            <li>item</li>
-        </ul>
-
+        <h1>{{ unit.lecturer.name }}</h1>
+				<br>{{ unit.lecturer.description }}<br>
+				<br><a href="https://www.google.com.au/#q=linkedin+monash+{{ unit.lecturer.name }}"><img src="https://lh4.googleusercontent.com/-cTMuJhKkzAc/UfGZGGGggbI/AAAAAAAASd0/3tvKO6lRdZA/s722-no/LinkedIn-Google-Plus-Profile-Pic-01.png" height=100 width=100></a><br>
     </div>
 </div>
 
